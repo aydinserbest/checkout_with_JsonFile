@@ -1,4 +1,4 @@
-package tests;
+package localpages;
 
 public record CheckoutTestData ( String firstName,
                                  String lastName,
@@ -8,7 +8,7 @@ public record CheckoutTestData ( String firstName,
                                  String address2,
                                  int country,
                                  int state,
-                                 String zip,
+                                 String ZIP,
                                  String cardName,
                                  String cardNumber,
                                  String cardExpiration,

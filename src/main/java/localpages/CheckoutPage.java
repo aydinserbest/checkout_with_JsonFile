@@ -23,6 +23,17 @@ public class CheckoutPage extends AbstractPage{
     private WebElement stateInput;
     @FindBy(id = "zip")
     private WebElement zipInput;
+    @FindBy(id = "cc-name")
+    private WebElement cardNameInput;
+    @FindBy(id = "cc-number")
+    private WebElement cardNumberInput;
+    @FindBy(id = "cc-number")
+    private WebElement cardExpirationDate;
+    @FindBy(id = "cc-cvv")
+    private WebElement cardCVV;
+    @FindBy(css = ".w-100.btn.btn-primary.btn-lg")
+    private WebElement submitButton;
+
 
 
 
@@ -32,7 +43,7 @@ public class CheckoutPage extends AbstractPage{
 
     @Override
     public boolean isAt() {
-        return false;
+        return isDisplayed(firstNameInput);
     }
     public void selectCountry(String country) {
         select(countryInput, country);
@@ -40,4 +51,20 @@ public class CheckoutPage extends AbstractPage{
     public void selectState(String state) {
         select(stateInput, state);
     }
+    public void fillCheckoutForm(CheckoutTestData data) {
+        type(firstNameInput, data.firstName());
+        type(lastNameInput, data.lastName());
+        type(userNameInput, data.username());
+        type(emailInput, data.email());
+        type(address1Input, data.address1());
+        selectCountry(String.valueOf(data.country()));
+        selectState(String.valueOf(data.state()));
+        type(zipInput, data.ZIP());
+        type(cardNameInput, data.cardName());
+        type(cardNumberInput, data.cardNumber());
+        type(cardExpirationDate, data.cardExpiration());
+        type(cardCVV, data.cardCVV());
+        clickOnElement(submitButton);
+    }
+
 }
