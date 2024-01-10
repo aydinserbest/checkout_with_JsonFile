@@ -87,7 +87,7 @@ public abstract class AbstractPage {
     }
     public boolean isDisplayed(ExpectedCondition<?> expectedCondition) {
         try {
-            webDriverWait.until(expectedCondition);
+            getWebDriverWait().until(expectedCondition);
         } catch (TimeoutException e) {
             log.warn("Timeout of {} wait for element ", timeoutSec);
             return false;

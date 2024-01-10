@@ -27,7 +27,7 @@ public class CheckoutPage extends AbstractPage{
     private WebElement cardNameInput;
     @FindBy(id = "cc-number")
     private WebElement cardNumberInput;
-    @FindBy(id = "cc-number")
+    @FindBy(id = "cc-expiration")
     private WebElement cardExpirationDate;
     @FindBy(id = "cc-cvv")
     private WebElement cardCVV;
@@ -57,8 +57,9 @@ public class CheckoutPage extends AbstractPage{
         type(userNameInput, data.username());
         type(emailInput, data.email());
         type(address1Input, data.address1());
-        selectCountry(String.valueOf(data.country()));
-        selectState(String.valueOf(data.state()));
+        type(address2Input, data.address2());
+        selectCountry(data.country());
+        selectState(data.state());
         type(zipInput, data.ZIP());
         type(cardNameInput, data.cardName());
         type(cardNumberInput, data.cardNumber());
