@@ -64,7 +64,7 @@
                 <version>${surefire.version}</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <file>src/test/resources/test-suites/flight-reservation-json.xml</file>
+                        <file>src/test/resources/test-suites/checkout_json.xml</file>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

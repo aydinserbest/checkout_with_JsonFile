@@ -1,0 +1,15 @@
+{
+  "firstName": "Anton",
+  "lastName": "Angelov",
+  "username": "aangelov",
+  "email": "info@berlinspaceflowers.com",
+  "address1": "1 Willi Brandt Avenue Tiergarten",
+  "address2": "Lützowplatz 17",
+  "country": 1 ,
+  "state": 2 ,
+  "ZIP": "10115",
+  "cardName": "Anton Angelov",
+  "cardNumber": "1234567890123456",
+  "cardExpiration": "12/23",
+  "cardCVV": "123"
+}
