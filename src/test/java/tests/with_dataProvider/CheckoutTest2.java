@@ -11,7 +11,6 @@ import util.JsonUtil;
 import static org.testng.Assert.assertTrue;
 
 public class CheckoutTest2 extends AbstractTest {
-    private CheckoutTestData testData;
 
     @BeforeSuite
     public void setupConfig() {
