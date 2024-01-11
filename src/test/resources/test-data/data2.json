@@ -1,0 +1,15 @@
+{
+  "firstName": "John",
+  "lastName": "White",
+  "username": "johnny",
+  "email": "info@data.com",
+  "address1": "seconde street",
+  "address2": "park avenue",
+  "country": "United States" ,
+  "state": "California" ,
+  "ZIP": "10116",
+  "cardName": "John White",
+  "cardNumber": "1234567890123456",
+  "cardExpiration": "12/26",
+  "cardCVV": "127"
+}

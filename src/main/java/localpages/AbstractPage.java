@@ -116,6 +116,9 @@ public abstract class AbstractPage {
     protected WebElement waitUntilVisible(final WebElement element) {
         return getWebDriverWait().until(ExpectedConditions.visibilityOf(element));
     }
+    protected List<WebElement> waitAndFindElements(By by) {
+        return getWebDriverWait().until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
+    }
     protected void select(WebElement element, String value) {
         waitUntilClickable(element);
         Select dropdown = new Select(element);

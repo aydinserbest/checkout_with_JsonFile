@@ -1,4 +1,4 @@
-package tests;
+package tests.wit_XML_file;
 
 import localpages.CheckoutPage;
 import localpages.CheckoutTestData;
@@ -6,13 +6,14 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import tests.AbstractTest;
 import util.Config;
 import util.Constants;
 import util.JsonUtil;
 
 import static org.testng.Assert.assertTrue;
 
-public class CheckoutTests extends AbstractTest {
+public class CheckoutTest1 extends AbstractTest {
     private CheckoutTestData testData;
 
     @BeforeSuite
