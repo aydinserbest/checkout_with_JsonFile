@@ -37,8 +37,12 @@ public class CheckoutTest2 extends AbstractTest {
         checkoutPage.fillCheckoutForm(testData);
 
         assertTrue(driver.getCurrentUrl().contains("paymentMethod=on"), "Form not sent");
-        System.out.println(driver.getCurrentUrl());
 
-
+    }
+    @Test(dataProvider = "CheckoutData")
+    public void userRegistration2(CheckoutTestData testData) {
+        CheckoutPage checkoutPage = new CheckoutPage(driver);
+        checkoutPage.visit(Config.get(Constants.URL));
+        checkoutPage.fillCheckoutForm(testData);
     }
 }
