@@ -20,10 +20,12 @@ public class CheckoutTest2 extends AbstractTest {
     public Object[][] provideTestData() {
         CheckoutTestData testData1 = JsonUtil.getTestData("test-data/data.json", CheckoutTestData.class);
         CheckoutTestData testData2 = JsonUtil.getTestData("test-data/data2.json", CheckoutTestData.class);
+        CheckoutTestData testData3 = JsonUtil.getTestData("test-data/data2.json", CheckoutTestData.class);
 
         return new Object[][] {
                 { testData1 },
-                { testData2 }
+                { testData2 },
+                { testData3 }
         };
     }
 
@@ -37,5 +39,12 @@ public class CheckoutTest2 extends AbstractTest {
         assertTrue(driver.getCurrentUrl().contains("paymentMethod=on"), "Form not sent");
         System.out.println("driver url is: " + driver.getCurrentUrl());
         System.out.println(testData.cardName());
+
+    }
+    @Test(dataProvider = "CheckoutData")
+    public void userRegistration2(CheckoutTestData testData) {
+        CheckoutPage checkoutPage = new CheckoutPage(driver);
+        checkoutPage.visit(Config.get(Constants.URL));
+        checkoutPage.fillCheckoutForm(testData);
     }
 }
