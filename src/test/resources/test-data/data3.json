@@ -1,0 +1,15 @@
+{
+  "firstName": "Mike",
+  "lastName": "Yellow",
+  "username": "mikey",
+  "email": "mike@data.com",
+  "address1": "vijfde street",
+  "address2": "park avenue",
+  "country": "United States" ,
+  "state": "California" ,
+  "ZIP": "10116",
+  "cardName": "mike yellow",
+  "cardNumber": "1234567890123456",
+  "cardExpiration": "12/25",
+  "cardCVV": "128"
+}
